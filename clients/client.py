@@ -65,3 +65,15 @@ class BitcoinClient:
         Method to info about the wallet
         """
         return self._call('getwalletinfo')
+
+    def getnewaddres(self):
+        """
+        Method to create a new wallet address
+        """
+        return self._call('getnewaddress')
+    
+    def dumpprivkey(self, wallet_address):
+        """
+        Method to get the private key of existing wallet address
+        """
+        return self._call('dumpprivkey', wallet_address)

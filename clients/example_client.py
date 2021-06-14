@@ -2,8 +2,8 @@ import os
 from client import BitcoinClient
 
 
-RPC_USERNAME = os.getenv('RPC_USERNAME')
-RPC_PASSWORD = os.getenv('RPC_PASSWORD')
+RPC_USERNAME = os.getenv('RPC_USERNAME', 'bitcoin')
+RPC_PASSWORD = os.getenv('RPC_PASSWORD', 'sushant')
 
 
 client = BitcoinClient(RPC_USERNAME, RPC_PASSWORD)
